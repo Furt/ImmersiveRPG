@@ -1,0 +1,16 @@
+[
+{
+  "modid": "immersiverpg",
+  "name": "ImmersiveRPG",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Furt","nferno55"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
