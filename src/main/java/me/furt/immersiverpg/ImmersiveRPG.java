@@ -1,3 +1,7 @@
+/**
+ * ImmersiveRPG
+ * Created by Furt on 8/4/2015.
+ */
 package me.furt.immersiverpg;
 
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
