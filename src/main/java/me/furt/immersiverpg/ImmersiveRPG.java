@@ -1,5 +1,6 @@
 package me.furt.immersiverpg;
 
+import cpw.mods.fml.common.event.FMLFingerprintViolationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.Mod;
@@ -7,20 +8,33 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import me.furt.immersiverpg.events.TestEvents;
+import me.furt.immersiverpg.util.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
+
+import java.sql.Ref;
 
 /**
  * ImmersiveRPG
  * Created by Furt on 8/4/2015.
  */
-@Mod(modid = ImmersiveRPG.MODID, version = ImmersiveRPG.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, certificateFingerprint = Reference.FINGERPRINT, version = Reference.MOD_VERSION, dependencies = Reference.DEPENDENCIES)
 public class ImmersiveRPG
 {
-    public static final String MODID = "ImmersiveRPG";
-    public static final String VERSION = "1.7.10-0.0.1";
-
-    @Instance("ImmersiveRPG")
+    @Instance(Reference.MOD_ID)
     public static ImmersiveRPG instance;
+
+    @EventHandler
+    public void invalidFingerprint(FMLFingerprintViolationEvent event)
+    {
+        if (Reference.FINGERPRINT.equals("@FINGERPRINT@"))
+        {
+            LogHelper.info("");
+        }
+        else
+        {
+            LogHelper.warn("");
+        }
+    }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)

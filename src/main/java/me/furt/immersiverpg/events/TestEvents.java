@@ -14,6 +14,7 @@ public class TestEvents
     public void loginMessage(PlayerLoggedInEvent event)
     {
         //event.player
+        // ObjWorld.isRemote
         //if(!event.player.getEntityWorld().isRemote)
         event.player.addChatComponentMessage(new ChatComponentText("Hello " + event.player.getDisplayName() + ", have a nice day!"));
     }
