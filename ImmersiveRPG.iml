@@ -663,5 +663,16 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dep/CoFHLib-[1.7.10]1.0.3-175.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="http://teamcofh.com/docs/cofhlib/javadoc/" />
+        </JAVADOC>
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
