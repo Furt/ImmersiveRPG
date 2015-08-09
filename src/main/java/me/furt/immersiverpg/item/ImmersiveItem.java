@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
  */
 public class ImmersiveItem extends Item {
 
-    public ImmersiveItem()
+    public ImmersiveItem(String unlocalizedName)
     {
 
     }

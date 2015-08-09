@@ -10,6 +10,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import me.furt.immersiverpg.block.BlockManager;
 import me.furt.immersiverpg.events.TestEvents;
+import me.furt.immersiverpg.item.ItemManager;
 import me.furt.immersiverpg.proxy.CommonProxy;
 import me.furt.immersiverpg.util.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -45,23 +46,22 @@ public class ImmersiveRPG
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        proxy.preInit(event);
         //nethandling, config, blocks, items, etc
-        BlockManager.init();
+        proxy.preInit(event);
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        proxy.init(event);
 		// gui, tileentity, recipes, etc
-        MinecraftForge.EVENT_BUS.register(new TestEvents());
+        //MinecraftForge.EVENT_BUS.register(new TestEvents());
+        proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        proxy.postInit(event);
         // final steps
+        proxy.postInit(event);
     }
 }
