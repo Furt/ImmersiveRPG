@@ -1,7 +1,7 @@
 package me.furt.immersiverpg.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.util.ChatComponentText;
 
 /**
@@ -11,7 +11,7 @@ import net.minecraft.util.ChatComponentText;
 public class TestEvents
 {
     @SubscribeEvent
-    public void loginMessage(PlayerLoggedInEvent event)
+    public void loginMessage(PlayerEvent.PlayerLoggedInEvent event)
     {
         //event.player
         // ObjWorld.isRemote

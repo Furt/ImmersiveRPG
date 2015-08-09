@@ -10,11 +10,12 @@ import java.util.logging.Level;
  * Created by Furt on 8/5/2015.
  */
 public class LogHelper {
-    private static String format = "blah";
+    private static String format = "";
 
     public static void log(Level logLevel, Object data)
     {
         //FMLLog.log(Reference.MOD_NAME, logLevel, String.valueOf(data));
+        //FMLLog.log(Reference.MOD_NAME, logLevel, format, data);
     }
 
     public static void all(Object object)
