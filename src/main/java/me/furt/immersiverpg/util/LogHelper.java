@@ -1,8 +1,5 @@
 package me.furt.immersiverpg.util;
 
-import cpw.mods.fml.common.FMLLog;
-import me.furt.immersiverpg.Reference;
-
 import java.util.logging.Level;
 
 /**

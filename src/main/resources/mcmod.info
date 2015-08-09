@@ -2,7 +2,7 @@
 {
   "modid": "immersiverpg",
   "name": "ImmersiveRPG",
-  "description": "",
+  "description": "Enhances minecraft mechanics with rpg aspects.",
   "version": ["1.7.10-0.0.1"],
   "mcversion": ["1.7.10-10.13.4.1448"],
   "url": "",
