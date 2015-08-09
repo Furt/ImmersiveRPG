@@ -23,6 +23,8 @@
 /copy
 /git
 /world
+/out
+/build
 options.txt
 eula.txt
 server.properties
