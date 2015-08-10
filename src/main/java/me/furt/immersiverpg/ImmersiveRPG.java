@@ -9,7 +9,8 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import me.furt.immersiverpg.proxy.CommonProxy;
-import me.furt.immersiverpg.util.LogHelper;
+import org.apache.logging.log4j.Logger;
+
 
 /**
  * ImmersiveRPG
@@ -18,6 +19,8 @@ import me.furt.immersiverpg.util.LogHelper;
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, certificateFingerprint = Reference.FINGERPRINT, version = Reference.MOD_VERSION)
 public class ImmersiveRPG
 {
+    public static Logger logger;
+
     @Instance(Reference.MOD_ID)
     public static ImmersiveRPG instance;
 
@@ -29,17 +32,18 @@ public class ImmersiveRPG
     {
         if (Reference.FINGERPRINT.equals("@FINGERPRINT@"))
         {
-            LogHelper.info("");
+            //logger.info("test");
         }
         else
         {
-            LogHelper.warn("");
+            //logger.warn("test");
         }
     }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        logger = event.getModLog();
         //nethandling, config, blocks, items, etc
         proxy.preInit(event);
     }
@@ -48,7 +52,6 @@ public class ImmersiveRPG
     public void init(FMLInitializationEvent event)
     {
 		// gui, tileentity, recipes, etc
-        //MinecraftForge.EVENT_BUS.register(new ServerTestEvents());
         proxy.init(event);
     }
 

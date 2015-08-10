@@ -1,13 +1,13 @@
 package me.furt.immersiverpg.proxy;
 
-import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import me.furt.immersiverpg.block.BlockManager;
-import me.furt.immersiverpg.events.ServerTestEvents;
+import me.furt.immersiverpg.events.CommonTestEvents;
 import me.furt.immersiverpg.item.ItemManager;
+import net.minecraftforge.common.MinecraftForge;
 
 /**
  * ImmersiveRPG
@@ -15,22 +15,21 @@ import me.furt.immersiverpg.item.ItemManager;
  */
 public class CommonProxy {
 
-    @SubscribeEvent
+    @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         BlockManager.init();
         ItemManager.init();
     }
 
-    @SubscribeEvent
+    @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        FMLCommonHandler.instance().bus().register(new ServerTestEvents());
+        MinecraftForge.EVENT_BUS.register(new CommonTestEvents());
     }
 
-    @SubscribeEvent
+    @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
     }
 }

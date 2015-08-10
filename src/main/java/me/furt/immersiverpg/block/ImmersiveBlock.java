@@ -1,11 +1,15 @@
 package me.furt.immersiverpg.block;
 
 import me.furt.immersiverpg.Reference;
+import me.furt.immersiverpg.item.ItemManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+
+import java.util.Random;
 
 /**
  * ImmersiveRPG
@@ -41,4 +45,30 @@ public class ImmersiveBlock extends Block {
     public IIcon getIcon(int side, int meta) {
         return this.icons[side];
     }
+
+    /**
+     * Not working as expected to i commented it out for now
+
+    @Override
+    public int quantityDropped(int meta, int fortune, Random random) {
+        return fortune*3;
+    }
+
+    @Override
+    public int quantityDropped(Random p_149745_1_) {
+        return 3;
+    }
+
+    @Override
+    public int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_) {
+        return 4;
+    }
+
+    @Override
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
+
+        return ItemManager.immersiveItem;
+    }
+
+    */
 }
