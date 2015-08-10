@@ -24,10 +24,5 @@ public class ServerTestEvents
     public void onBlockPlace(BlockEvent.BreakEvent event)
     {
         System.out.println("Blocks break event triggered");
-        if(event.block.equals())
-        {
-            event.getPlayer().dropItem(ItemManager.immersiveItem, 1);
-            System.out.println("You broke grass!");
-        }
     }
 }
