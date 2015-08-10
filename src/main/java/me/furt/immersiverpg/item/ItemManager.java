@@ -1,7 +1,6 @@
 package me.furt.immersiverpg.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import me.furt.immersiverpg.ImmersiveRPG;
 import me.furt.immersiverpg.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -17,5 +16,6 @@ public class ItemManager {
     public static final void init()
     {
         GameRegistry.registerItem(immersiveItem, "IItem");
+        System.out.println("Items loaded.");
     }
 }

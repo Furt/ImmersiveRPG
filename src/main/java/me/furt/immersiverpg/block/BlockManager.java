@@ -14,5 +14,6 @@ public final class BlockManager {
     public static final void init()
     {
         GameRegistry.registerBlock(immersiveBlock, "IBlock");
+        System.out.println("Blocks loaded.");
     }
 }

@@ -8,14 +8,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import me.furt.immersiverpg.block.BlockManager;
-import me.furt.immersiverpg.events.TestEvents;
-import me.furt.immersiverpg.item.ItemManager;
 import me.furt.immersiverpg.proxy.CommonProxy;
 import me.furt.immersiverpg.util.LogHelper;
-import net.minecraftforge.common.MinecraftForge;
-
-import java.sql.Ref;
 
 /**
  * ImmersiveRPG
@@ -27,7 +21,7 @@ public class ImmersiveRPG
     @Instance(Reference.MOD_ID)
     public static ImmersiveRPG instance;
 
-    @SidedProxy(clientSide = "me.furt.immersiverpg.proxy.ClientProxy", serverSide = "me.furt.immersiverpg.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
     @EventHandler
@@ -54,7 +48,7 @@ public class ImmersiveRPG
     public void init(FMLInitializationEvent event)
     {
 		// gui, tileentity, recipes, etc
-        //MinecraftForge.EVENT_BUS.register(new TestEvents());
+        //MinecraftForge.EVENT_BUS.register(new ServerTestEvents());
         proxy.init(event);
     }
 

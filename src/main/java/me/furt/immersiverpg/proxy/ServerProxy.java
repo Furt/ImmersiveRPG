@@ -20,6 +20,7 @@ public class ServerProxy extends CommonProxy {
     public void init(FMLInitializationEvent event)
     {
         super.init(event);
+
     }
 
     @Override
